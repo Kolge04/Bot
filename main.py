@@ -24,3 +24,26 @@ async def hello(ctx):
 
 
 bot.run(os.environ["DISCORD_TOKEN"])
+
+
+import time
+import requests
+import os
+
+print(f"🔄 Gereksinimler Yükleniyor..")
+os.system(f"pip install time")
+print("❕Bitmek Üzere..") 
+os.system(f"pip install requests")
+print("❤️ Gereksinimler Yüklendi!\n💖 Geliştirici: @uslanmazmurti")
+
+ID = int()
+token = ''
+flood = 'Bu Bir Flood Mesajıdır!'
+
+gonderilen = 0
+
+while True:
+           requests.post(f'''https://api.telegram.org/bot{token}/sendMessage?chat_id={ID}&text={flood}''')
+           time.sleep(0.5)
+           gonderilen += 1
+           print(f"✅ {gonderilen} Kez Gönderildi")
